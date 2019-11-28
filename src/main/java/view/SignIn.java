@@ -48,12 +48,10 @@ public class SignIn extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         emailField = new javax.swing.JTextField();
         signInLabel = new javax.swing.JLabel();
-        passwordField = new javax.swing.JTextField();
         minimizeLabel = new javax.swing.JLabel();
         exitLabel = new javax.swing.JLabel();
+        passwordField = new javax.swing.JPasswordField();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -111,28 +109,6 @@ public class SignIn extends javax.swing.JFrame {
         jPanel2.add(signInLabel);
         signInLabel.setBounds(70, 400, 400, 51);
 
-        passwordField.setBackground(new java.awt.Color(255, 255, 255, 0)
-        );
-        passwordField.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        passwordField.setText("Password");
-        passwordField.setBorder(null);
-        passwordField.setPreferredSize(new java.awt.Dimension(156, 35));
-        passwordField.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                passwordFieldFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                passwordFieldFocusLost(evt);
-            }
-        });
-        passwordField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordFieldActionPerformed(evt);
-            }
-        });
-        jPanel2.add(passwordField);
-        passwordField.setBounds(80, 320, 360, 50);
-
         minimizeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minimize.png"))); // NOI18N
         minimizeLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         minimizeLabel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -153,17 +129,16 @@ public class SignIn extends javax.swing.JFrame {
         jPanel2.add(exitLabel);
         exitLabel.setBounds(990, 20, 20, 20);
 
+        passwordField.setBackground(new java.awt.Color(255, 255, 255, 0));
+        passwordField.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        passwordField.setBorder(null);
+        passwordField.setOpaque(false);
+        jPanel2.add(passwordField);
+        passwordField.setBounds(80, 320, 360, 50);
+
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/custom – 1.png"))); // NOI18N
         jPanel2.add(jLabel3);
         jLabel3.setBounds(0, 0, 1030, 590);
-
-        jLabel4.setText("jLabel4");
-        jPanel2.add(jLabel4);
-        jLabel4.setBounds(660, 70, 41, 16);
-
-        jLabel5.setText("jLabel5");
-        jPanel2.add(jLabel5);
-        jLabel5.setBounds(620, 110, 41, 16);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -185,10 +160,6 @@ public class SignIn extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_emailFieldActionPerformed
 
-    private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordFieldActionPerformed
-
     private void emailFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFieldFocusGained
         // TODO add your handling code here:
         if(emailField.getText().equals("Email")){
@@ -201,18 +172,6 @@ public class SignIn extends javax.swing.JFrame {
             emailField.setText("Email");
         }
     }//GEN-LAST:event_emailFieldFocusLost
-
-    private void passwordFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFieldFocusGained
-         if(passwordField.getText().equals("Password")){
-            passwordField.setText("");
-        }
-    }//GEN-LAST:event_passwordFieldFocusGained
-
-    private void passwordFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFieldFocusLost
-        if(passwordField.getText().equals("")){
-            passwordField.setText("Password");
-        }
-    }//GEN-LAST:event_passwordFieldFocusLost
 
     private void signInLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signInLabelMouseClicked
         String email = emailField.getText();
@@ -331,11 +290,9 @@ public class SignIn extends javax.swing.JFrame {
     private javax.swing.JTextField emailField;
     private javax.swing.JLabel exitLabel;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel minimizeLabel;
-    private javax.swing.JTextField passwordField;
+    private javax.swing.JPasswordField passwordField;
     private javax.swing.JLabel signInLabel;
     // End of variables declaration//GEN-END:variables
 }
